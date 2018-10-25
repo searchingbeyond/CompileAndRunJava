@@ -32,8 +32,5 @@ else
     echo "编译时出现错误!!!"
 fi
 
-
-# 删除刚刚生成的那个class文件，防止某次编译失败，但是执行了之前成功编译出的class文件。
-if [ -f $class.class ]; then
-    rm -f $class.class
-fi
+# 删除当前目录下所有的*.class文件
+rm -f *.class
